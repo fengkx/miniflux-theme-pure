@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
+    "gulp": "^4.0.2",
+    "gulp-cleancss": "^0.2.2",
+    "gulp-clone": "^2.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "postcss": "^8.2.9",
+    "postcss-import": "^14.0.1",
+    "postcss-nested": "^5.0.5",
+    "tailwindcss": "^2.0.4"
+  }
+}
