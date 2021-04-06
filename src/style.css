@@ -768,6 +768,18 @@ details {
 }
 .item-header {
   @apply inline-block align-middle font-medium;
+  /* hide feeds count in category in small screen device*/
+  color: var(--item-background);
+  .feed-entries-counter {
+    /* show counter in feeds page */
+    @apply text-sm;
+    color: var(--item-meta-focus-color);
+  }
+}
+@screen md {
+  .item-header {
+    color: inherit;
+  }
 }
 .item-title {
   @apply align-middle font-bold leading-normal block;

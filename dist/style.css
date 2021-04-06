@@ -1728,6 +1728,21 @@ details a.button {
   display: inline-block;
   font-weight: 500;
   vertical-align: middle;
+  /* hide feeds count in category in small screen device*/
+  color: var(--item-background);
+}
+
+.item-header .feed-entries-counter {
+    /* show counter in feeds page */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--item-meta-focus-color);
+  }
+
+@media (min-width: 768px) {
+  .item-header {
+    color: inherit;
+  }
 }
 
 .item-title {
