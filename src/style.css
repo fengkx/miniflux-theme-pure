@@ -753,6 +753,17 @@ details {
       text-decoration: none;
     }
   }
+  &-prev,
+  &-next {
+    visibility: hidden;
+    a:link {
+      visibility: visible;
+      &:before,
+      &:after {
+        visibility: visible;
+      }
+    }
+  }
 }
 .item {
   @apply overflow-hidden mb-9 flex flex-col shadow-md dark:shadow-lg-invert;

@@ -1695,6 +1695,22 @@ details a.button {
       text-decoration: none;
     }
 
+.pagination-prev,
+  .pagination-next {
+    visibility: hidden;
+  }
+
+.pagination-prev a:link, .pagination-next a:link {
+      visibility: visible;
+    }
+
+.pagination-prev a:link:before,
+      .pagination-prev a:link:after,
+      .pagination-next a:link:before,
+      .pagination-next a:link:after {
+        visibility: visible;
+      }
+
 .item {
   display: flex;
   flex-direction: column;
