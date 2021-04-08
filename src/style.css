@@ -88,8 +88,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --body-color: #efefef;
-    --body-background: theme("colors.black");
-    --item-background: #18191a;
+    --body-background: #1a1a1a;
+    --item-background: #161a18;
     --hr-border-color: theme("colors.gray.600");
     --title-color: theme("colors.gray.400");
     --link-color: theme("colors.gray.400");
@@ -140,11 +140,11 @@
     --modal-box-shadow: 0 0 10px rgba(82, 168, 236, 0.6);
     --pagination-link-color: theme("colors.gray.400");
     --pagination-border-color: theme("colors.gray.700");
-    --category-color: #efefef;
-    --category-background-color: theme("colors.gray.300");
-    --category-border-color: theme("colors.gray.200");
-    --category-link-color: theme("colors.gray.400");
-    --category-link-hover-color: theme("colors.gray.400");
+    --category-color: theme("colors.gray.200");
+    --category-background-color: theme("colors.gray.700");
+    --category-border-color: #e5e7eb;
+    --category-link-color: theme("colors.white");
+    --category-link-hover-color: theme("colors.gray.100");
     --item-border-color: theme("colors.gray.700");
     --item-padding: 4px;
     --item-title-link-font-weight: theme("fontWeight.bold");
@@ -158,9 +158,9 @@
     --current-item-box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
     --entry-header-border-color: theme("colors.gray.700");
     --entry-header-title-link-color: #bbb;
-    --entry-content-color: theme("colors.gray.400");
-    --entry-content-code-color: theme("colors.white");
-    --entry-content-code-background: theme("colors.gray.600");
+    --entry-content-color: #888;
+    --entry-content-code-color: #ddd;
+    --entry-content-code-background: #2c323a;
     --entry-content-code-border-color: theme("colors.gray.500");
     --entry-content-quote-color: #777;
     --entry-content-abbr-border-color: #777;
@@ -952,6 +952,7 @@ article.feed-parsing-error {
   @apply text-gray-600 italic text-base;
 }
 .entry-content {
+  --link-color: #6581e9;
   padding-top: 15px;
   font-size: 1.125rem;
   font-weight: var(--entry-content-font-weight);
@@ -965,7 +966,11 @@ article.feed-parsing-error {
   img {
     max-width: 100%;
   }
-
+  @media (prefers-color-scheme: dark) {
+    img {
+      filter: brightness(0.85) contrast(1.2);
+    }
+  }
   figure {
     margin-top: 15px;
     margin-bottom: 15px;
