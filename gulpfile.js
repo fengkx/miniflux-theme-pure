@@ -10,8 +10,8 @@ gulp.task("css", () => {
     .pipe(
       postcss([
         require("postcss-import"),
-        require("tailwindcss"),
         require("postcss-nested"),
+        require("tailwindcss"),
         require("autoprefixer"),
       ])
     );
@@ -20,7 +20,11 @@ gulp.task("css", () => {
   src.pipe(gulp.dest("dist"));
 
   return cloned
-    .pipe(cleancss())
+    .pipe(
+      postcss([
+        require('cssnano')
+      ])
+    )
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("dist"));
 });
